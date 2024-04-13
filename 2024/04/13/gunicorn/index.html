@@ -9,7 +9,7 @@
     <meta name="description" content="Gunicorn 是什麼？ Gunicorn是一個WSGI HTTP服務器 Gunicorn使用pre-fork worker模型，能夠在單個伺服器上處理大量的並發請求，提供高效能的Web服務。 Gunicorn可以與Nginx、Apache等Web伺服器整合，透過反向代理的方式來處理靜態檔案和負載均衡，提高系統的效能和可靠性。  Gunicorn 如何使用 安裝gunicorn  1pip i">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Gunicorn 是什麼？">
-<meta property="og:url" content="http://example.com/2024/04/13/gunicorn/index.html">
+<meta property="og:url" content="https://1stby.github.io/zong/2024/04/13/gunicorn/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="Gunicorn 是什麼？ Gunicorn是一個WSGI HTTP服務器 Gunicorn使用pre-fork worker模型，能夠在單個伺服器上處理大量的並發請求，提供高效能的Web服務。 Gunicorn可以與Nginx、Apache等Web伺服器整合，透過反向代理的方式來處理靜態檔案和負載均衡，提高系統的效能和可靠性。  Gunicorn 如何使用 安裝gunicorn  1pip i">
 <meta property="og:locale" content="en_US">
@@ -21,17 +21,17 @@
     
       
         
-          <link rel="shortcut icon" href="/images/favicon.ico">
+          <link rel="shortcut icon" href="/zong/images/favicon.ico">
         
       
       
         
-          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          <link rel="icon" type="image/png" href="/zong/images/favicon-192x192.png" sizes="192x192">
         
       
       
         
-          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          <link rel="apple-touch-icon" sizes="180x180" href="/zong/images/apple-touch-icon.png">
         
       
     
@@ -46,7 +46,7 @@
 
     <!-- styles -->
     
-<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/zong/css/style.css">
 
     <!-- persian styles -->
     
@@ -67,11 +67,11 @@
     <span id="nav">
       <ul>
         <!--
-       --><li><a href="/">Home</a></li><!--
+       --><li><a href="/zong/">Home</a></li><!--
      --><!--
-       --><li><a href="/about/">About</a></li><!--
+       --><li><a href="/zong/about/">About</a></li><!--
      --><!--
-       --><li><a href="/archives/">Writing</a></li><!--
+       --><li><a href="/zong/archives/">Writing</a></li><!--
      --><!--
        --><li><a target="_blank" rel="noopener" href="http://github.com/probberechts">Projects</a></li><!--
      -->
@@ -82,7 +82,7 @@
       <ul>
         
         
-        <li><a class="icon" aria-label="Next post" href="/2024/04/13/hello-world/"><i class="fa-solid fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="Next post" href="/zong/2024/04/13/hello-world/"><i class="fa-solid fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
         
         <li><a class="icon" aria-label="Back to top" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
         <li><a class="icon" aria-label="Share post" href="#"><i class="fa-solid fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
@@ -95,17 +95,17 @@
     <br/>
     <div id="share" style="display: none">
       <ul>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://example.com/2024/04/13/gunicorn/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://example.com/2024/04/13/gunicorn/&text=Gunicorn 是什麼？"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://example.com/2024/04/13/gunicorn/&title=Gunicorn 是什麼？"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://example.com/2024/04/13/gunicorn/&is_video=false&description=Gunicorn 是什麼？"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=Gunicorn 是什麼？&body=Check out this article: http://example.com/2024/04/13/gunicorn/"><i class="fa-solid fa-envelope " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://example.com/2024/04/13/gunicorn/&title=Gunicorn 是什麼？"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://example.com/2024/04/13/gunicorn/&title=Gunicorn 是什麼？"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://example.com/2024/04/13/gunicorn/&title=Gunicorn 是什麼？"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://example.com/2024/04/13/gunicorn/&title=Gunicorn 是什麼？"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://example.com/2024/04/13/gunicorn/&name=Gunicorn 是什麼？&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://example.com/2024/04/13/gunicorn/&t=Gunicorn 是什麼？"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://1stby.github.io/zong/2024/04/13/gunicorn/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://1stby.github.io/zong/2024/04/13/gunicorn/&text=Gunicorn 是什麼？"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://1stby.github.io/zong/2024/04/13/gunicorn/&title=Gunicorn 是什麼？"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://1stby.github.io/zong/2024/04/13/gunicorn/&is_video=false&description=Gunicorn 是什麼？"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Gunicorn 是什麼？&body=Check out this article: https://1stby.github.io/zong/2024/04/13/gunicorn/"><i class="fa-solid fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://1stby.github.io/zong/2024/04/13/gunicorn/&title=Gunicorn 是什麼？"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://1stby.github.io/zong/2024/04/13/gunicorn/&title=Gunicorn 是什麼？"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://1stby.github.io/zong/2024/04/13/gunicorn/&title=Gunicorn 是什麼？"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://1stby.github.io/zong/2024/04/13/gunicorn/&title=Gunicorn 是什麼？"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://1stby.github.io/zong/2024/04/13/gunicorn/&name=Gunicorn 是什麼？&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://1stby.github.io/zong/2024/04/13/gunicorn/&t=Gunicorn 是什麼？"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
@@ -191,11 +191,11 @@
     <div id="nav-footer" style="display: none">
       <ul>
         
-          <li><a href="/">Home</a></li>
+          <li><a href="/zong/">Home</a></li>
         
-          <li><a href="/about/">About</a></li>
+          <li><a href="/zong/about/">About</a></li>
         
-          <li><a href="/archives/">Writing</a></li>
+          <li><a href="/zong/archives/">Writing</a></li>
         
           <li><a target="_blank" rel="noopener" href="http://github.com/probberechts">Projects</a></li>
         
@@ -211,17 +211,17 @@
 
     <div id="share-footer" style="display: none">
       <ul>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://example.com/2024/04/13/gunicorn/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://example.com/2024/04/13/gunicorn/&text=Gunicorn 是什麼？"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://example.com/2024/04/13/gunicorn/&title=Gunicorn 是什麼？"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://example.com/2024/04/13/gunicorn/&is_video=false&description=Gunicorn 是什麼？"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=Gunicorn 是什麼？&body=Check out this article: http://example.com/2024/04/13/gunicorn/"><i class="fa-solid fa-envelope fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://example.com/2024/04/13/gunicorn/&title=Gunicorn 是什麼？"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://example.com/2024/04/13/gunicorn/&title=Gunicorn 是什麼？"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://example.com/2024/04/13/gunicorn/&title=Gunicorn 是什麼？"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://example.com/2024/04/13/gunicorn/&title=Gunicorn 是什麼？"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://example.com/2024/04/13/gunicorn/&name=Gunicorn 是什麼？&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://example.com/2024/04/13/gunicorn/&t=Gunicorn 是什麼？"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://1stby.github.io/zong/2024/04/13/gunicorn/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://1stby.github.io/zong/2024/04/13/gunicorn/&text=Gunicorn 是什麼？"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://1stby.github.io/zong/2024/04/13/gunicorn/&title=Gunicorn 是什麼？"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://1stby.github.io/zong/2024/04/13/gunicorn/&is_video=false&description=Gunicorn 是什麼？"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Gunicorn 是什麼？&body=Check out this article: https://1stby.github.io/zong/2024/04/13/gunicorn/"><i class="fa-solid fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://1stby.github.io/zong/2024/04/13/gunicorn/&title=Gunicorn 是什麼？"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://1stby.github.io/zong/2024/04/13/gunicorn/&title=Gunicorn 是什麼？"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://1stby.github.io/zong/2024/04/13/gunicorn/&title=Gunicorn 是什麼？"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://1stby.github.io/zong/2024/04/13/gunicorn/&title=Gunicorn 是什麼？"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://1stby.github.io/zong/2024/04/13/gunicorn/&name=Gunicorn 是什麼？&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://1stby.github.io/zong/2024/04/13/gunicorn/&t=Gunicorn 是什麼？"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
@@ -251,11 +251,11 @@
     <nav>
       <ul>
         <!--
-       --><li><a href="/">Home</a></li><!--
+       --><li><a href="/zong/">Home</a></li><!--
      --><!--
-       --><li><a href="/about/">About</a></li><!--
+       --><li><a href="/zong/about/">About</a></li><!--
      --><!--
-       --><li><a href="/archives/">Writing</a></li><!--
+       --><li><a href="/zong/archives/">Writing</a></li><!--
      --><!--
        --><li><a target="_blank" rel="noopener" href="http://github.com/probberechts">Projects</a></li><!--
      -->
@@ -305,7 +305,7 @@
   </script>
 
 
-<script src="/js/main.js"></script>
+<script src="/zong/js/main.js"></script>
 
 <!-- search -->
 
