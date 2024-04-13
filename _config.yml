@@ -102,5 +102,5 @@ theme: cactus
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: https://github.com/1stby/Zong.Blog.git
-  branch: master
+  repo: https://github.com/1stby/zong.git
+  branch: gh-page
