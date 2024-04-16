@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang=en>
+<html lang=zh>
 <head>
     <!-- so meta -->
     <meta charset="utf-8">
@@ -12,11 +12,11 @@
 <meta property="og:url" content="https://1stby.github.io/zong/2024/04/16/css-specificity/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="前言在前端開發中，CSS扮演著非常重要的角色。它負責網頁的樣式呈現，讓網頁變得美觀和易於使用。然而當我們的樣式表變得越來越龐大和複雜時，難免會遇到一些樣式衝突的問題。這時候瞭解CSS權重的運作機制就變得非常重要。本文將深入探討CSS權重的基本概念、計算規則以及一些使用技巧，幫助你更好地掌控樣式，寫出高質量的CSS代碼。 CSS權重的基本規則CSS權重是瀏覽器用來決定使用哪個樣式的規則。當我們都想">
-<meta property="og:locale" content="en_US">
+<meta property="og:locale" content="zh_TW">
 <meta property="og:image" content="https://i.ibb.co/tK2jYKM/CSS-specificity.png">
 <meta property="article:published_time" content="2024-04-16T03:19:32.000Z">
-<meta property="article:modified_time" content="2024-04-16T03:55:48.623Z">
-<meta property="article:author" content="John Doe">
+<meta property="article:modified_time" content="2024-04-16T03:57:01.659Z">
+<meta property="article:author" content="Zong">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://i.ibb.co/tK2jYKM/CSS-specificity.png">
     
@@ -69,15 +69,15 @@
     <span id="nav">
       <ul>
         <!--
-       --><li><a href="/zong/">Home</a></li><!--
+       --><li><a href="/zong/">首頁</a></li><!--
      --><!--
-       --><li><a href="/zong/about/">About</a></li><!--
+       --><li><a href="/zong/about/">關於</a></li><!--
      --><!--
-       --><li><a href="/zong/archives/">Writing</a></li><!--
+       --><li><a href="/zong/archives/">文章</a></li><!--
      --><!--
-       --><li><a target="_blank" rel="noopener" href="http://github.com/probberechts">Projects</a></li><!--
+       --><li><a target="_blank" rel="noopener" href="http://github.com/probberechts">項目</a></li><!--
      --><!--
-       --><li><a href="/zong/search/">Search</a></li><!--
+       --><li><a href="/zong/search/">搜尋</a></li><!--
      -->
       </ul>
     </span>
@@ -86,15 +86,15 @@
       <ul>
         
         
-        <li><a class="icon" aria-label="Next post" href="/zong/2024/04/13/gunicorn/"><i class="fa-solid fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="下一篇" href="/zong/2024/04/13/gunicorn/"><i class="fa-solid fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
         
-        <li><a class="icon" aria-label="Back to top" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
-        <li><a class="icon" aria-label="Share post" href="#"><i class="fa-solid fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+        <li><a class="icon" aria-label="回到頁首" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="分享" href="#"><i class="fa-solid fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
       </ul>
-      <span id="i-prev" class="info" style="display:none;">Previous post</span>
-      <span id="i-next" class="info" style="display:none;">Next post</span>
-      <span id="i-top" class="info" style="display:none;">Back to top</span>
-      <span id="i-share" class="info" style="display:none;">Share post</span>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">回到頁首</span>
+      <span id="i-share" class="info" style="display:none;">分享</span>
     </span>
     <br/>
     <div id="share" style="display: none">
@@ -136,7 +136,7 @@
 
     <div class="meta">
       <span class="author p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person">
-        <span class="p-name" itemprop="name">John Doe</span>
+        <span class="p-name" itemprop="name">Zong</span>
       </span>
       
     <div class="postdate">
@@ -165,7 +165,6 @@
 <p>在這個例子中，.nav-link的顏色會是紅色,因為類選擇器的權重高於元素選擇器。<br></p>
 <p>如果權重相同那就會看先後順序：</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">  <span class="selector-class">.nav-link</span> &#123;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">color</span>: red;</span></span><br><span class="line"><span class="language-css">  &#125;</span></span><br><span class="line"><span class="language-css">  </span></span><br><span class="line"><span class="language-css">  <span class="selector-class">.nav-link</span> &#123;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">color</span>: green;</span></span><br><span class="line"><span class="language-css">  &#125;</span></span><br><span class="line"><span class="language-css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">nav</span> <span class="attr">id</span>=<span class="string">&quot;nav-bar&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">&quot;nav-link&quot;</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>Link<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">nav</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
 <p>nav-link的顏色會是綠色，權重相同，越後面越優先。</p>
 <hr>
 <h2 id="權重計算"><a href="#權重計算" class="headerlink" title="權重計算"></a>權重計算</h2><p>為了能更準確的計算CSS權重，我將選擇器附上一個值，方便我們好算出誰的權重高。<br></p>
@@ -197,15 +196,15 @@
     <div id="nav-footer" style="display: none">
       <ul>
         
-          <li><a href="/zong/">Home</a></li>
+          <li><a href="/zong/">首頁</a></li>
         
-          <li><a href="/zong/about/">About</a></li>
+          <li><a href="/zong/about/">關於</a></li>
         
-          <li><a href="/zong/archives/">Writing</a></li>
+          <li><a href="/zong/archives/">文章</a></li>
         
-          <li><a target="_blank" rel="noopener" href="http://github.com/probberechts">Projects</a></li>
+          <li><a target="_blank" rel="noopener" href="http://github.com/probberechts">項目</a></li>
         
-          <li><a href="/zong/search/">Search</a></li>
+          <li><a href="/zong/search/">搜尋</a></li>
         
       </ul>
     </div>
@@ -235,12 +234,12 @@
     </div>
 
     <div id="actions-footer">
-        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa-solid fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa-solid fa-bars fa-lg" aria-hidden="true"></i> 選單</a>
         
-          <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa-solid fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+          <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa-solid fa-list fa-lg" aria-hidden="true"></i> 文章目錄</a>
         
-        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa-solid fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
-        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa-solid fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up fa-lg" aria-hidden="true"></i> 頁首</a>
     </div>
 
   </div>
@@ -253,21 +252,21 @@
     
     
     2016-2024
-    John Doe
+    Zong
   </div>
   <div class="footer-right">
     <nav>
       <ul>
         <!--
-       --><li><a href="/zong/">Home</a></li><!--
+       --><li><a href="/zong/">首頁</a></li><!--
      --><!--
-       --><li><a href="/zong/about/">About</a></li><!--
+       --><li><a href="/zong/about/">關於</a></li><!--
      --><!--
-       --><li><a href="/zong/archives/">Writing</a></li><!--
+       --><li><a href="/zong/archives/">文章</a></li><!--
      --><!--
-       --><li><a target="_blank" rel="noopener" href="http://github.com/probberechts">Projects</a></li><!--
+       --><li><a target="_blank" rel="noopener" href="http://github.com/probberechts">項目</a></li><!--
      --><!--
-       --><li><a href="/zong/search/">Search</a></li><!--
+       --><li><a href="/zong/search/">搜尋</a></li><!--
      -->
       </ul>
     </nav>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang=en>
+<html lang=zh>
 <head>
     <!-- so meta -->
     <meta charset="utf-8">
@@ -12,10 +12,10 @@
 <meta property="og:url" content="https://1stby.github.io/zong/2024/04/13/gunicorn/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="Gunicorn 是什麼？ Gunicorn是一個WSGI HTTP服務器 Gunicorn使用pre-fork worker模型，能夠在單個伺服器上處理大量的並發請求，提供高效能的Web服務。 Gunicorn可以與Nginx、Apache等Web伺服器整合，透過反向代理的方式來處理靜態檔案和負載均衡，提高系統的效能和可靠性。  Gunicorn 如何使用 安裝gunicorn  1pip i">
-<meta property="og:locale" content="en_US">
+<meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2024-04-13T02:15:05.993Z">
 <meta property="article:modified_time" content="2024-04-13T04:18:56.053Z">
-<meta property="article:author" content="John Doe">
+<meta property="article:author" content="Zong">
 <meta name="twitter:card" content="summary">
     
     
@@ -67,15 +67,15 @@
     <span id="nav">
       <ul>
         <!--
-       --><li><a href="/zong/">Home</a></li><!--
+       --><li><a href="/zong/">首頁</a></li><!--
      --><!--
-       --><li><a href="/zong/about/">About</a></li><!--
+       --><li><a href="/zong/about/">關於</a></li><!--
      --><!--
-       --><li><a href="/zong/archives/">Writing</a></li><!--
+       --><li><a href="/zong/archives/">文章</a></li><!--
      --><!--
-       --><li><a target="_blank" rel="noopener" href="http://github.com/probberechts">Projects</a></li><!--
+       --><li><a target="_blank" rel="noopener" href="http://github.com/probberechts">項目</a></li><!--
      --><!--
-       --><li><a href="/zong/search/">Search</a></li><!--
+       --><li><a href="/zong/search/">搜尋</a></li><!--
      -->
       </ul>
     </span>
@@ -83,18 +83,18 @@
     <span id="actions">
       <ul>
         
-        <li><a class="icon" aria-label="Previous post" href="/zong/2024/04/16/css-specificity/"><i class="fa-solid fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="上一篇" href="/zong/2024/04/16/css-specificity/"><i class="fa-solid fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
         
         
-        <li><a class="icon" aria-label="Next post" href="/zong/2024/04/13/hello-world/"><i class="fa-solid fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="下一篇" href="/zong/2024/04/13/hello-world/"><i class="fa-solid fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
         
-        <li><a class="icon" aria-label="Back to top" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
-        <li><a class="icon" aria-label="Share post" href="#"><i class="fa-solid fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+        <li><a class="icon" aria-label="回到頁首" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="分享" href="#"><i class="fa-solid fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
       </ul>
-      <span id="i-prev" class="info" style="display:none;">Previous post</span>
-      <span id="i-next" class="info" style="display:none;">Next post</span>
-      <span id="i-top" class="info" style="display:none;">Back to top</span>
-      <span id="i-share" class="info" style="display:none;">Share post</span>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">回到頁首</span>
+      <span id="i-share" class="info" style="display:none;">分享</span>
     </span>
     <br/>
     <div id="share" style="display: none">
@@ -136,7 +136,7 @@
 
     <div class="meta">
       <span class="author p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person">
-        <span class="p-name" itemprop="name">John Doe</span>
+        <span class="p-name" itemprop="name">Zong</span>
       </span>
       
     <div class="postdate">
@@ -192,15 +192,15 @@
     <div id="nav-footer" style="display: none">
       <ul>
         
-          <li><a href="/zong/">Home</a></li>
+          <li><a href="/zong/">首頁</a></li>
         
-          <li><a href="/zong/about/">About</a></li>
+          <li><a href="/zong/about/">關於</a></li>
         
-          <li><a href="/zong/archives/">Writing</a></li>
+          <li><a href="/zong/archives/">文章</a></li>
         
-          <li><a target="_blank" rel="noopener" href="http://github.com/probberechts">Projects</a></li>
+          <li><a target="_blank" rel="noopener" href="http://github.com/probberechts">項目</a></li>
         
-          <li><a href="/zong/search/">Search</a></li>
+          <li><a href="/zong/search/">搜尋</a></li>
         
       </ul>
     </div>
@@ -230,12 +230,12 @@
     </div>
 
     <div id="actions-footer">
-        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa-solid fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa-solid fa-bars fa-lg" aria-hidden="true"></i> 選單</a>
         
-          <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa-solid fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+          <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa-solid fa-list fa-lg" aria-hidden="true"></i> 文章目錄</a>
         
-        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa-solid fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
-        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa-solid fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up fa-lg" aria-hidden="true"></i> 頁首</a>
     </div>
 
   </div>
@@ -248,21 +248,21 @@
     
     
     2016-2024
-    John Doe
+    Zong
   </div>
   <div class="footer-right">
     <nav>
       <ul>
         <!--
-       --><li><a href="/zong/">Home</a></li><!--
+       --><li><a href="/zong/">首頁</a></li><!--
      --><!--
-       --><li><a href="/zong/about/">About</a></li><!--
+       --><li><a href="/zong/about/">關於</a></li><!--
      --><!--
-       --><li><a href="/zong/archives/">Writing</a></li><!--
+       --><li><a href="/zong/archives/">文章</a></li><!--
      --><!--
-       --><li><a target="_blank" rel="noopener" href="http://github.com/probberechts">Projects</a></li><!--
+       --><li><a target="_blank" rel="noopener" href="http://github.com/probberechts">項目</a></li><!--
      --><!--
-       --><li><a href="/zong/search/">Search</a></li><!--
+       --><li><a href="/zong/search/">搜尋</a></li><!--
      -->
       </ul>
     </nav>
