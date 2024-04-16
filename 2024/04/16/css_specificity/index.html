@@ -6,19 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
-    <meta name="description" content="前言在前端開發中，CSS扮演著非常重要的角色。它負責網頁的樣式呈現，讓網頁變得美觀和易於使用。然而當我們的樣式表變得越來越龐大和複雜時，難免會遇到一些樣式衝突的問題。這時候瞭解CSS權重的運作機制就變得非常重要。本文將深入探討CSS權重的基本概念、計算規則以及一些使用技巧,幫助你更好地掌控樣式,寫出高質量的CSS代碼。 CSS權重的基本規則CSS權重是瀏覽器用來決定使用哪個樣式的規則。當我們都想">
+    <meta name="description" content="前言在前端開發中，CSS扮演著非常重要的角色。它負責網頁的樣式呈現，讓網頁變得美觀和易於使用。然而當我們的樣式表變得越來越龐大和複雜時，難免會遇到一些樣式衝突的問題。這時候瞭解CSS權重的運作機制就變得非常重要。本文將深入探討CSS權重的基本概念、計算規則以及一些使用技巧，幫助你更好地掌控樣式，寫出高質量的CSS代碼。 CSS權重的基本規則CSS權重是瀏覽器用來決定使用哪個樣式的規則。當我們都想">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CSS 權重-學習筆記">
 <meta property="og:url" content="https://1stby.github.io/zong/2024/04/16/css_specificity/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="前言在前端開發中，CSS扮演著非常重要的角色。它負責網頁的樣式呈現，讓網頁變得美觀和易於使用。然而當我們的樣式表變得越來越龐大和複雜時，難免會遇到一些樣式衝突的問題。這時候瞭解CSS權重的運作機制就變得非常重要。本文將深入探討CSS權重的基本概念、計算規則以及一些使用技巧,幫助你更好地掌控樣式,寫出高質量的CSS代碼。 CSS權重的基本規則CSS權重是瀏覽器用來決定使用哪個樣式的規則。當我們都想">
+<meta property="og:description" content="前言在前端開發中，CSS扮演著非常重要的角色。它負責網頁的樣式呈現，讓網頁變得美觀和易於使用。然而當我們的樣式表變得越來越龐大和複雜時，難免會遇到一些樣式衝突的問題。這時候瞭解CSS權重的運作機制就變得非常重要。本文將深入探討CSS權重的基本概念、計算規則以及一些使用技巧，幫助你更好地掌控樣式，寫出高質量的CSS代碼。 CSS權重的基本規則CSS權重是瀏覽器用來決定使用哪個樣式的規則。當我們都想">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://1stby.github.io/zong/public/images/css_specificity/CSSspecificity01.png">
+<meta property="og:image" content="https://1stby.github.io/zong/source/img/css_specificity/CSSspecificity01.png">
 <meta property="article:published_time" content="2024-04-16T01:48:48.012Z">
-<meta property="article:modified_time" content="2024-04-16T02:49:12.609Z">
+<meta property="article:modified_time" content="2024-04-16T03:00:36.401Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://1stby.github.io/zong/public/images/css_specificity/CSSspecificity01.png">
+<meta name="twitter:image" content="https://1stby.github.io/zong/source/img/css_specificity/CSSspecificity01.png">
     
     
       
@@ -156,8 +156,8 @@
   
 
   <div class="content e-content" itemprop="articleBody">
-    <p><img src="/zong/public/images/css_specificity/CSSspecificity01.png"></p>
-<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>在前端開發中，CSS扮演著非常重要的角色。它負責網頁的樣式呈現，讓網頁變得美觀和易於使用。然而當我們的樣式表變得越來越龐大和複雜時，難免會遇到一些樣式衝突的問題。這時候瞭解CSS權重的運作機制就變得非常重要。本文將深入探討CSS權重的基本概念、計算規則以及一些使用技巧,幫助你更好地掌控樣式,寫出高質量的CSS代碼。</p>
+    <p><img src="/zong/source/img/css_specificity/CSSspecificity01.png"></p>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>在前端開發中，CSS扮演著非常重要的角色。它負責網頁的樣式呈現，讓網頁變得美觀和易於使用。然而當我們的樣式表變得越來越龐大和複雜時，難免會遇到一些樣式衝突的問題。這時候瞭解CSS權重的運作機制就變得非常重要。本文將深入探討CSS權重的基本概念、計算規則以及一些使用技巧，幫助你更好地掌控樣式，寫出高質量的CSS代碼。</p>
 <h2 id="CSS權重的基本規則"><a href="#CSS權重的基本規則" class="headerlink" title="CSS權重的基本規則"></a>CSS權重的基本規則</h2><p>CSS權重是瀏覽器用來決定使用哪個樣式的規則。<br><br>當我們都想對一個元素，使用多種的樣式，這時就要看誰的權重高。<br><br>以下是CSS選擇器的優先順序：<br></p>
 <p>行內樣式(Inline styles) &gt;  ID選擇器(#id) &gt; 類選擇器(.class) &gt; 元素選擇器(element) &gt; * <br></p>
 <p>舉例：</p>
